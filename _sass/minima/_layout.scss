@@ -1,0 +1,339 @@
+/**
+ * Site header
+ */
+.site-header {
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  min-height: $spacing-unit * 1.865;
+  max-width: 20%;
+  // Positioning context for the mobile navigation icon
+  
+  margin-left: 10px;
+  height: 90vh;
+  @media screen and (max-width: $on-palm) {
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin:0;
+    margin-left: 0px;
+    border-color: $background-color;
+  }
+  
+}
+.site-description {
+  @media screen and (max-width: $on-palm) {
+    display: none;
+  }
+}
+.site-profile {
+  margin: 0;
+}
+.profile-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 100%;
+  @media screen and (max-width: $on-palm) {
+    display: none;
+  }
+
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: $spacing-unit 0;
+  @media screen and (max-width: $on-palm) {
+    flex-direction: column;
+  }
+}
+
+.header-divider {
+  height: 0px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  @media screen and (max-width: $on-palm) {
+    display: none;
+  }
+}
+.social-wrapper{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @media screen and (max-width: $on-palm) {
+    display: none;
+  }
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: justify;
+  @media screen and (max-width: $on-palm) {
+    flex-direction: row;
+  }
+}
+
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size*1.25;
+  margin-bottom: 10px;
+  float: left;
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+  }
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+.social-media-list {
+  color: $text-color;
+}
+.site-nav {
+  line-height: $base-line-height * $base-font-size *1.25;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    font-size: $base-font-size * 1.1;
+    margin-bottom: $base-line-height * 0.5;
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: $spacing-unit / 2;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $text-color;
+      }
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+.page_button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  margin-left: 15px;
+  background-color: $button-color;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: $text-color;
+  color: white;
+}
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  padding: $spacing-unit 0;
+  background: $brand-color;
+}
+
+.footer-heading {
+  @include relative-font-size(1.125);
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  @include relative-font-size(0.9375);
+  color: $text-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.footer-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+  .footer-col-1,
+  .footer-col-2 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+  flex: 1;
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $text-color;
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    @include relative-font-size(2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+}

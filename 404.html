@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -20,5 +19,27 @@ layout: default
   <h1>404</h1>
 
   <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p>The requested page could not be found. Here is a dog instead.</p>
+  <img id ="dog404" />
+
+  <script> 
+    xhr = new XMLHttpRequest()
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          var dog_json= JSON.parse(this.responseText);
+          var dog_url = dog_json["url"];
+          var image = document.getElementById("dog404");
+          var file_ext = dog_url.split('.').pop();
+          if (file_ext != "webm" && file_ext != "mp4") {
+            console.log(image)
+            image.src = dog_url;          // image.src = "IMAGE URL/PATH"
+          } else {
+            image.src = "assets/backupdog.jpg"
+          }
+         
+      }
+    };
+    xhr.open("GET", "https://random.dog/woof.json")
+    xhr.send()
+  </script>
 </div>
