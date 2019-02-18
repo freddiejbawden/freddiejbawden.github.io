@@ -8,7 +8,7 @@
   min-height: $spacing-unit * 1.865;
   max-width: 20%;
   // Positioning context for the mobile navigation icon
-  
+
   margin-left: 10px;
   height: 90vh;
   @media screen and (max-width: $on-palm) {
@@ -20,7 +20,7 @@
     margin-left: 0px;
     border-color: $background-color;
   }
-  
+
 }
 .site-description {
   @media screen and (max-width: $on-palm) {
@@ -65,6 +65,9 @@
   @media screen and (max-width: $on-palm) {
     display: none;
   }
+}
+.post-tags {
+  font-size: $base-font-size * 0.8;
 }
 .header-wrapper {
   display: flex;
@@ -133,7 +136,7 @@
       z-index: 2;
       cursor: pointer;
     }
-    
+
     .menu-icon {
       display: block;
       float: right;
