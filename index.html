@@ -1,31 +1,111 @@
 <html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  </head>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      //the event occurred#
+      document.getElementById("gogogo").addEventListener("click", function(){
+        var x = document.getElementById("marks").querySelectorAll("#score");
+        let score = 0;
+        for (var i = 0; i < x.length; i++) {
+          score += x[i].value ? parseInt(x[i].value) : 0
+          console.log(score)
+        }
+        var finalMark = document.getElementById("final-mark").innerHTML = score
+      });
+    })
+
+  </script>
   <style>
-    html {
-      font-family: 'Comic Sans MS'
+    .wrapper {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
-    div {
+    .markbox {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 10px;
+    }
+    .markbox label {
+      min-width: 0;
+      margin-right: 10px;
+      width: 100px;
+    }
+    .markbox input {
+      min-width: 0;
+    }
+
+    .marks {
+      border: 2px solid #444444;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #fefefe;
       display: flex;
       flex-direction: column;
-      align-items: center;
+    }
+    button {
+      align-self: center;
+
     }
   </style>
-  <div>
-      <h1>Performance Enhancer!</h1>
-      <h3>Do you want to enhance your performance at the Edinburgh Fringe?</h3>
-      <h2>Use LAMP!</h2>
-      <img src="https://thumbs.gfycat.com/AthleticDearestAsp-small.gif"/>
-      <h3>Lamp lets you light up many things!</h3>
-      <ul>
-        <li>Face</li>
-        <li>Body</li>
-        <li>Arm</li>
-        <li>Painting</li>
-        <li>Your hack</li>
-      </ul>
-      <h2>Are you fed up of having to let the man tell you how to run your show?</h2> 
-      <h3>LAMP lets you take back control!</h3>
+  <body>
+    <div class="wrapper">
+        <h1>SDP Mark Calculator</h1>
+        <p>Input the raw mark you achieved for each assessment</p>
+        <div class="marks" id="marks">
+          <div class="markbox">
+              <label for="pp-mark">Project Plan</label>
+              <input type="number" placeholder="Project Plan Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Demo 1</label>
+              <input type="number" placeholder="Demo 1 Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Demo 2</label>
+              <input type="number" placeholder="Demo 2 Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Demo 3</label>
+              <input type="number" placeholder="Demo 3 Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">User Guide</label>
+              <input type="number" placeholder="User Guide Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Demo 4</label>
+              <input type="number" placeholder="Demo 4 Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Industry Day</label>
+              <input type="number" placeholder="Industry Day Mark" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Individual Report</label>
+              <input type="number" placeholder="Individual Report" id="score">
+          </div>
+          <div class="markbox">
+              <label for="pp-mark">Technical Report</label>
+              <input type="number" placeholder="Technical Report" id="score">
+          </div>
+          <button id="gogogo" class="button-primary">How fucked am I?</button>
+        </div>
+        <div>
+           <h1>
+             Your mark is <span id="final-mark">0</span>%
+           </h1>
+        </div>
+      </div>
+    </div>
 
-      <a href="https://www.amazon.co.uk/Lloytron-L961BK-Flexi-Desk-Black/dp/B002TLC3EY/ref=sr_1_9?keywords=lamp&qid=1552821706&s=gateway&sr=8-9">BUY LAMP NOW FOR ONLY £69.99</a>
-  </div>
-  
+  </body>
+
+
 </html>
