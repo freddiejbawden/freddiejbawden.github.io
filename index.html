@@ -1,67 +1,33 @@
 <html>
   <head>
-     <link rel="stylesheet" type="text/css" href="css/skeleton.css">
-     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-     <link rel="stylesheet" type="text/css" href="css/sdpcalculator.css">
-     <script src="js/calculateMark.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #wowtrigger {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+    
   </head>
-
-
   <body>
-    <div class="wrapper">
-        <h1>SDP Mark Calculator</h1>
-        <p>Input the raw mark you achieved for each assessment</p>
-        <div class="marks" id="marks">
-          <div class="markbox-wrapper">
-            <div class="markbox">
-                <label for="pp-mark">Project Plan</label>
-                <input type="number" placeholder="Project Plan Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Demo 1</label>
-                <input type="number" placeholder="Demo 1 Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Demo 2</label>
-                <input type="number" placeholder="Demo 2 Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Demo 3</label>
-                <input type="number" placeholder="Demo 3 Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">User Guide</label>
-                <input type="number" placeholder="User Guide Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Demo 4</label>
-                <input type="number" placeholder="Demo 4 Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Industry Day</label>
-                <input type="number" placeholder="Industry Day Mark" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Individual Report</label>
-                <input type="number" placeholder="Individual Report" id="score">
-            </div>
-            <div class="markbox">
-                <label for="pp-mark">Technical Report</label>
-                <input type="number" placeholder="Technical Report" id="score">
-            </div>
-          </div>
-
-          <button id="gogogo" class="button-primary">How fucked am I?</button>
-        </div>
-        <div>
-           <h1>
-             Your mark is <span id="final-mark">0</span>%
-           </h1>
-        </div>
-      </div>
+    <button id="wowtrigger">
+      <h1>WOW!</h1>
     </div>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let div = document.getElementById("wowtrigger");
+        const playWow = () => {
+          alert("wow")
+          var audio = new Audio('wow.mp3');
+          audio.play();
+        }
+        div.onclick = playWow;
+      });
+      </script>
   </body>
-
-
 </html>
