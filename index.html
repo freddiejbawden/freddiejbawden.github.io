@@ -5,27 +5,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
       }
-      #wowtrigger {
+      button {
         width: 100px;
         height: 100px;
+        margin: 20px;
         background-color: red;
       }
+
     </style>
     
   </head>
   <body>
     <button id="wowtrigger">
+      <h1>uWOWu!</h1>
+    </button>
+    <button id="wow2trigger">
       <h1>WOW!</h1>
-    </div>
+    </button>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        let div = document.getElementById("wowtrigger");
+        let wow1 = document.getElementById("wowtrigger");
         const playWow = () => {
           var audio = new Audio('wow.mp3');
           audio.play();
         }
-        div.onclick = playWow;
+        wow1.onclick = playWow;
+        let wow2 = document.getElementById("wow2trigger");
+        const playWow2 = () => {
+          var audio = new Audio('wow2.mp3');
+          audio.play();
+        }
+        wow2.onclick = playWow2;
       });
       </script>
   </body>
