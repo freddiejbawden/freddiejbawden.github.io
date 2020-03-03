@@ -1,53 +1,41 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <title>Freddie's Bad Meme Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Freddie Bawden</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
-      body {
-        display: flex;
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
         justify-content: center;
-        align-items: center;
-        font-family: 'Verdana';
-        text-align: center;
-        flex-direction: column;
-        padding: 50px;
-      }
-      button {
-        max-width: 500px;
-        width: 100%;
-        height: auto;
-        margin: 25;
-        background-color: red;
-        
       }
     </style>
-    
   </head>
   <body>
-    <h1>The Wowinator 5000</h1>
-    <button id="wowtrigger">
-      <h1>uWOWu!</h1>
-    </button>
-    <button id="wow2trigger">
-      <h1>WOW!</h1>
-    </button>
-    <div>
-      Sponsored By TK™
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <div>
+        <h1 style="text-align: center;">Freddie Bawden</h1>
+        <div style="display: flex; justify-content: space-between;">
+          <button onclick="location.href='https://github.com/freddiejbawden/'">GitHub</button>
+          <button onclick="location.href='https://devpost.com/freddiejbawden/'">Devpost</button>
+          <button onclick="location.href='https://drive.google.com/uc?export=download&id=1C-p7tGB5KTAYl3XoqRkp0op633pJHz9u'">CV</button>
+        </div>
+      </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        let wow1 = document.getElementById("wowtrigger");
-        const playWow = () => {
-          var audio = new Audio('wow.mp3');
-          audio.play();
-        }
-        wow1.onclick = playWow;
-        let wow2 = document.getElementById("wow2trigger");
-        const playWow2 = () => {
-          var audio = new Audio('wow2.mp3');
-          audio.play();
-        }
-        wow2.onclick = playWow2;
-      });
-      </script>
   </body>
 </html>

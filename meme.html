@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Freddie's Bad Meme Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Verdana';
+        text-align: center;
+        flex-direction: column;
+        padding: 50px;
+      }
+      button {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        margin: 25;
+        background-color: red;
+        
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>The Wowinator 5000</h1>
+    <button id="wowtrigger">
+      <h1>uWOWu!</h1>
+    </button>
+    <button id="wow2trigger">
+      <h1>WOW!</h1>
+    </button>
+    <div>
+      Sponsored By TK™
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let wow1 = document.getElementById("wowtrigger");
+        const playWow = () => {
+          var audio = new Audio('wow.mp3');
+          audio.play();
+        }
+        wow1.onclick = playWow;
+        let wow2 = document.getElementById("wow2trigger");
+        const playWow2 = () => {
+          var audio = new Audio('wow2.mp3');
+          audio.play();
+        }
+        wow2.onclick = playWow2;
+      });
+      </script>
+  </body>
+</html>
